@@ -1186,9 +1186,10 @@ position = Vector2(87, 580)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
 [node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("11_ya4ey")]
-offset_left = 3.0
+visible = false
+offset_left = 4.0
 offset_top = -6.0
-offset_right = 3.0
+offset_right = 4.0
 offset_bottom = -6.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -1200,7 +1201,7 @@ offset_right = 182.0
 offset_bottom = 54.0
 size_flags_horizontal = 0
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel"]
+[node name="PointsLabel" type="Label" parent="CanvasLayer/Panel"]
 unique_name_in_owner = true
 texture_filter = 1
 layout_mode = 1

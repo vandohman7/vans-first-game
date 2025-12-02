@@ -1,6 +1,6 @@
 extends Node
 
-@onready var label: Label = %Label
+@onready var label: Label = %PointsLabel
 
 var points = 0
 

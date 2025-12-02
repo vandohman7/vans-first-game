@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
+# this is cool
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
 		var y_delta = position.y - body.position.y
