@@ -1,0 +1,89 @@
+[gd_scene load_steps=5 format=3 uid="uid://o8gsr3n5tpxw"]
+
+[ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://b31it1vdcd4p3" path="res://scenes/images/Gemini_Generated_Image_i60m07i60m07i60m (1).png" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://b5klp1ca0jdye" path="res://scenes/images/game_main_menu.png" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="4_wu84c"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_bqqt6")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -297.0
+offset_bottom = 283.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ekxnf")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.256
+anchor_right = 0.5
+anchor_bottom = 0.256
+offset_left = -323.0
+offset_top = -72.888
+offset_right = 341.0
+offset_bottom = 73.112
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bqqt6")
+
+[node name="level 1" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -218.0
+offset_top = -28.0
+offset_right = -25.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "level 1"
+
+[node name="tutorial" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -89.0
+offset_right = 96.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "tutorial"
+
+[node name="level 2" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 23.0
+offset_top = -27.0
+offset_right = 216.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "level 2"
+
+[node name="music" parent="." instance=ExtResource("4_wu84c")]
+position = Vector2(573, 319)
+
+[connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
