@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://103pwctkupon"
-path="res://.godot/imported/Chain.png-e0e24fb2a7e0279e71050761642a4113.ctex"
+uid="uid://328kd557cj5i"
+path="res://.godot/imported/Grey On (32x8).png-f2aec06ce957179fae20b3d25473f40c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Platforms/Chain.png"
-dest_files=["res://.godot/imported/Chain.png-e0e24fb2a7e0279e71050761642a4113.ctex"]
+source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Fire/Platforms/Grey On (32x8).png"
+dest_files=["res://.godot/imported/Grey On (32x8).png-f2aec06ce957179fae20b3d25473f40c.ctex"]
 
 [params]
 

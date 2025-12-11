@@ -5,16 +5,13 @@ extends Control
 
 #@onready var visiblity = pause_menu.get_node("visible")
 
-func _process(delta):
-	print("_process")
+func _process(_delta):
 	testtab()
 	
 func resume():
-	print("resume")
 	get_tree().paused = false
 
 func pause():
-	print("pause")
 	get_tree().paused = true
 
 func isPaused():
@@ -40,3 +37,8 @@ func _on_restart_pressed():
 
 func _on_quit_pressed():
 	get_tree().quit()
+
+
+func _on_main_menu_pressed() -> void:
+	resume()
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

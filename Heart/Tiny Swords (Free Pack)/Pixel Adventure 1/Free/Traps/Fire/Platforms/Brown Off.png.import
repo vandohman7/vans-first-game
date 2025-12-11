@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6x1d4w8kx2lu"
-path="res://.godot/imported/Brown On (32x8).png-3eeb06eb3d5c6527c241944d40802681.ctex"
+uid="uid://ddtlt74xbnlr3"
+path="res://.godot/imported/Brown Off.png-ff220f6fa62391b939e83c77056da009.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Platforms/Brown On (32x8).png"
-dest_files=["res://.godot/imported/Brown On (32x8).png-3eeb06eb3d5c6527c241944d40802681.ctex"]
+source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Fire/Platforms/Brown Off.png"
+dest_files=["res://.godot/imported/Brown Off.png-ff220f6fa62391b939e83c77056da009.ctex"]
 
 [params]
 

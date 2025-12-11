@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://328kd557cj5i"
-path="res://.godot/imported/Grey On (32x8).png-d47d1b8d183aeac76cf90c4d7deee08e.ctex"
+uid="uid://d12w7kqgphmx6"
+path="res://.godot/imported/Idle.png-1963ffea0860d691d9ea7d3ab398e0eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Platforms/Grey On (32x8).png"
-dest_files=["res://.godot/imported/Grey On (32x8).png-d47d1b8d183aeac76cf90c4d7deee08e.ctex"]
+source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Spiked Ball/Spikes/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-1963ffea0860d691d9ea7d3ab398e0eb.ctex"]
 
 [params]
 

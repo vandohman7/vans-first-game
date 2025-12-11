@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d12w7kqgphmx6"
-path="res://.godot/imported/Idle.png-0580f683cc2f048c34ce36e2fb974c88.ctex"
+uid="uid://103pwctkupon"
+path="res://.godot/imported/Chain.png-3a3fd8c30be6eb1c90d56bcd8744b92d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Spikes/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-0580f683cc2f048c34ce36e2fb974c88.ctex"]
+source_file="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Traps/Fire/Platforms/Chain.png"
+dest_files=["res://.godot/imported/Chain.png-3a3fd8c30be6eb1c90d56bcd8744b92d.ctex"]
 
 [params]
 

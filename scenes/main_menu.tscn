@@ -49,22 +49,6 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 text = "level 1"
 
-[node name="tutorial" type="Button" parent="."]
-texture_filter = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -97.0
-offset_top = -89.0
-offset_right = 96.0
-offset_bottom = -34.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
-text = "tutorial"
-
 [node name="level 2" type="Button" parent="."]
 texture_filter = 1
 anchors_preset = 8
@@ -84,6 +68,43 @@ text = "level 2"
 [node name="music" parent="." instance=ExtResource("4_wu84c")]
 position = Vector2(573, 319)
 
+[node name="tutorial" type="Button" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -89.0
+offset_right = 96.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "tutorial"
+
+[node name="level 3" type="Button" parent="."]
+texture_filter = 1
+offset_left = 357.0
+offset_top = 356.0
+offset_right = 550.0
+offset_bottom = 410.0
+theme_override_font_sizes/font_size = 30
+text = "level 3"
+
+[node name="level 4" type="Button" parent="."]
+texture_filter = 1
+offset_left = 598.0
+offset_top = 355.0
+offset_right = 791.0
+offset_bottom = 409.0
+theme_override_font_sizes/font_size = 30
+text = "level 4
+"
+
 [connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
-[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]
