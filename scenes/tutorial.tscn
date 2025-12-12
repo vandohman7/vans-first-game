@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bnv84tsldwmv6"]
+[gd_scene load_steps=16 format=3 uid="uid://bnv84tsldwmv6"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_0epgs"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="2_g2equ"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="5_0hilk"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="6_wr8iv"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="7_e13mp"]
-[ext_resource type="PackedScene" uid="uid://d2d8j4n3akmpi" path="res://scenes/scripts/pause_menu.tscn" id="7_tbcdj"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="8_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="10_ikfo1"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="11_g2equ"]
@@ -1136,7 +1135,7 @@ layer_0/tile_data = PackedInt32Array(-262174, 458754, 1, -196638, 458754, 1, -13
 [node name="berrys" type="Node" parent="TileMap"]
 
 [node name="berry_collectable" parent="TileMap/berrys" instance=ExtResource("5_0hilk")]
-position = Vector2(223, 775)
+position = Vector2(630, 820)
 
 [node name="berry_collectable2" parent="TileMap/berrys" instance=ExtResource("5_0hilk")]
 position = Vector2(504, 819)
@@ -1153,7 +1152,7 @@ position = Vector2(1141, 758)
 [node name="pineapples" type="Node" parent="TileMap"]
 
 [node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
-position = Vector2(365, 825)
+position = Vector2(1213, 795)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_g2equ")]
 texture_filter = 1
@@ -1162,12 +1161,22 @@ position = Vector2(45, 822)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, -2)
 
-[node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("7_tbcdj")]
+[node name="pause_menu" parent="CharacterBody2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 visible = false
 offset_left = 4.0
 offset_top = -6.0
 offset_right = 4.0
 offset_bottom = -6.0
+script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1206,7 +1215,7 @@ script = ExtResource("8_vrdqu")
 [node name="enemys" type="Node" parent="."]
 
 [node name="enemy" parent="enemys" instance=ExtResource("11_g2equ")]
-position = Vector2(499, 824)
+position = Vector2(840, 822)
 
 [node name="end sheep" parent="." instance=ExtResource("10_ikfo1")]
 position = Vector2(1906, 826)
@@ -1216,8 +1225,40 @@ position = Vector2(1906, 826)
 [node name="Node" type="Node" parent="Node2"]
 
 [node name="pineapple" parent="." instance=ExtResource("6_wr8iv")]
-position = Vector2(1584, 823)
+position = Vector2(1538, 772)
 
 [node name="traps" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_bottom = 0.035
+offset_left = 93.0
+offset_top = 751.0
+offset_right = 168.0
+offset_bottom = 751.32
+text = "b to jump"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1372.0
+offset_top = 750.0
+offset_right = 1491.0
+offset_bottom = 773.0
+text = "a to short jump"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 255.0
+offset_top = 677.0
+offset_right = 428.0
+offset_bottom = 726.0
+text = "colect points via 
+cherys and pineapples"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 811.0
+offset_top = 741.0
+offset_right = 893.0
+offset_bottom = 790.0
+text = "x to attack
+"
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
