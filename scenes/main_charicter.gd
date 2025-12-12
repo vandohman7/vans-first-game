@@ -36,7 +36,7 @@ func _physics_process(delta: float) -> void:
 #func _eeeeeee()
 	if is_on_floor():
 		fastfall = false
-		print("false")
+		#print("false")
 
 
 	var direction := Input.get_axis("left", "right")
