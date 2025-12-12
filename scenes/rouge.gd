@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-var SPEED = 400.0
-var JUMP_VELOCITY = -400.0
+var SPEED = 450.0
+var JUMP_VELOCITY = -450.0
 #var howLongKeyPressed = 0
 var acceleration = 20
 @onready var sprite_2d = $Sprite2D
