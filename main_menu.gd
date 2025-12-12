@@ -6,7 +6,7 @@ func _ready():
 	
 #func _process(_delta: float) -> void:
 	#print("main menu _process 1")
-	#print("main menu _process")
+	#print("main menu _process") hiya
 
 func _on_level_1_pressed() -> void:
 	print("main.tscn")

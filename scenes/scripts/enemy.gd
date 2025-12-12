@@ -20,6 +20,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if (y_delta >15): 
 			queue_free()
 			body.jump()
+			game_manager.add_points(999999999999999999)
 			game_manager.add_points(0)
 		else:
 			
