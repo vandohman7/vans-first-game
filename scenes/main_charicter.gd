@@ -38,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	if is_on_floor():
 		fastfall = false
 		#print("2")
-
+#sfioaia
 
 	var direction := Input.get_axis("left", "right")
 	if direction:
@@ -86,6 +86,21 @@ func _physics_process(delta: float) -> void:
 	else: if Input.is_action_just_pressed("small_jump"):
 		velocity.y = +400
 		#velocity.x = 0
+
+	if Input.is_action_just_pressed("main_menu"):
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
+
+
+	if Input.is_action_just_pressed("reset"):
+		get_tree().reload_current_scene()
+
+
+	if Input.is_action_just_pressed("quit"):
+		get_tree().quit()
+
+
+
+
 
 
 	#if Input.is_action_just_pressed("high_jump") and is_on_floor():
