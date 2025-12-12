@@ -120,6 +120,19 @@ theme_override_font_sizes/font_size = 30
 text = "level 4
 "
 
+[node name="level 5" type="Button" parent="."]
+texture_filter = 1
+offset_left = 598.0
+offset_top = 355.0
+offset_right = 791.0
+offset_bottom = 409.0
+focus_neighbor_left = NodePath("../level 3")
+focus_neighbor_top = NodePath("../level 2")
+focus_next = NodePath("../tutorial")
+theme_override_font_sizes/font_size = 30
+text = "level 4
+"
+
 [node name="music" parent="." instance=ExtResource("4_wu84c")]
 position = Vector2(573, 319)
 
@@ -142,3 +155,4 @@ quit                    down"
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level 5" to="." method="_on_level_4_pressed"]
