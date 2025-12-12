@@ -13,7 +13,6 @@ config_version=5
 config/name="my project"
 run/main_scene="uid://o8gsr3n5tpxw"
 config/features=PackedStringArray("4.5", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
