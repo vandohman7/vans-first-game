@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cciqh88vvoj8t"]
 
-[ext_resource type="Script" uid="uid://yvqr2u84kp51" path="res://scenes/pine_apple.gd" id="1_5josp"]
+[ext_resource type="Script" uid="uid://yvqr2u84kp51" path="res://scenes/scripts/pine_apple.gd" id="1_5josp"]
 [ext_resource type="Texture2D" uid="uid://b2vh5wkquhno" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Items/Fruits/Pineapple.png" id="1_h5nld"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h5nld"]

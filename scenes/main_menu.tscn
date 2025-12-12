@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://o8gsr3n5tpxw"]
 
-[ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://main_menu.gd" id="1_bqqt6"]
+[ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://scenes/scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b31it1vdcd4p3" path="res://scenes/images/Gemini_Generated_Image_i60m07i60m07i60m (1).png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://b5klp1ca0jdye" path="res://scenes/images/game_main_menu.png" id="2_bqqt6"]
 [ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="4_wu84c"]
