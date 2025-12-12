@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c832h4hh3c136"]
+[gd_scene load_steps=16 format=3 uid="uid://c832h4hh3c136"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_1bvp3"]
@@ -10,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="8_5vw27"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="9_kek77"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://d2d8j4n3akmpi" path="res://scenes/scripts/pause_menu.tscn" id="11_ya4ey"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_1bvp3")
@@ -1190,13 +1189,6 @@ texture_filter = 1
 position = Vector2(87, 580)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
-[node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("11_ya4ey")]
-visible = false
-offset_left = 4.0
-offset_top = -6.0
-offset_right = 4.0
-offset_bottom = -6.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

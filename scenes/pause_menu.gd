@@ -28,7 +28,7 @@ func testtab():
 
 func _on_resume_pressed():
 	resume()
-
+	
 
 func _on_restart_pressed():
 	resume()

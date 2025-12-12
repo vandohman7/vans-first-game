@@ -10,7 +10,6 @@ var inAir = 0
 
 
 
-
 var fastfall = false
 
 #func sprint(): 
@@ -37,8 +36,8 @@ func _physics_process(delta: float) -> void:
 #func _eeeeeee()
 	if is_on_floor():
 		fastfall = false
-		#print("2")
-#sfioaia
+		print("false")
+
 
 	var direction := Input.get_axis("left", "right")
 	if direction:
@@ -68,6 +67,7 @@ func _physics_process(delta: float) -> void:
 		acceleration = 20
 
 
+	
 	#if velocity.x +600 or -600:
 		#JUMP_VELOCITY = 500
 
@@ -77,7 +77,7 @@ func _physics_process(delta: float) -> void:
 	else: if Input.is_action_just_pressed("jump"):
 		velocity.y = +400
 		fastfall = true
-		#print ("1")
+		print ("true")
 	
 
 
@@ -101,10 +101,8 @@ func _physics_process(delta: float) -> void:
 
 
 
-
-
 	#if Input.is_action_just_pressed("high_jump") and is_on_floor():
 			#velocity.y = JUMP_VELOCITY -50
 	#else: if Input.is_action_just_pressed("high_jump"):
 		#velocity.y = +400
-		##velocity.x = 0
+			###velocity.x = 0
