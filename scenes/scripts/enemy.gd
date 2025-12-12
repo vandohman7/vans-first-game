@@ -5,7 +5,7 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
-@onready var main_charicter = %main_charicter
+#@onready var main_charicter = %main_charicter
 @onready var game_manager = %game_manager
 
 
