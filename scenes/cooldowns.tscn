@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4sur5mulhufe"]
+
+[ext_resource type="Script" uid="uid://1vqaiiwoe3r7" path="res://cooldowns.gd" id="1_cgai5"]
+
+[node name="cooldowns" type="Node" groups=["cooldowns"]]
+script = ExtResource("1_cgai5")
