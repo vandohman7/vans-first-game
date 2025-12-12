@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2d8j4n3akmpi"]
+[gd_scene load_steps=4 format=3 uid="uid://d2d8j4n3akmpi"]
 
 [ext_resource type="Script" uid="uid://c57j6ut4cti05" path="res://scenes/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Script" uid="uid://37m7gjc6fx3" path="res://scenes/scripts/resume.gd" id="2_ugu8e"]
+[ext_resource type="Script" uid="uid://dp3tk1cddhmo7" path="res://scenes/scripts/5.gd" id="3_6d08n"]
 
 [node name="pause_menu" type="Control"]
 process_mode = 3
@@ -29,22 +31,32 @@ layout_mode = 2
 
 [node name="resume" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../main_menu")
+focus_neighbor_bottom = NodePath("../restart")
 text = "resume
 "
+script = ExtResource("2_ugu8e")
 
 [node name="restart" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../resume")
+focus_neighbor_bottom = NodePath("../quit")
 text = "restart
 "
 
 [node name="quit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../restart")
+focus_neighbor_bottom = NodePath("../main_menu")
 text = "quit
 "
 
 [node name="main_menu" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../quit")
+focus_neighbor_bottom = NodePath("../resume")
 text = "main menu"
+script = ExtResource("3_6d08n")
 
 [connection signal="pressed" from="PanelContainer/VBoxContainer/resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="PanelContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]

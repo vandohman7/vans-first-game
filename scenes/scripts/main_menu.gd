@@ -2,11 +2,12 @@ extends Node
 
 
 func _ready():
-	print("main menu loaded")
+	pass
 	
-#func _process(_delta: float) -> void:
-	#print("main menu _process 1")
-	#print("main menu _process")
+	
+	
+func _process(_delta: float) -> void:
+	pass
 
 func _on_level_1_pressed() -> void:
 	print("main.tscn")
