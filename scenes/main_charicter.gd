@@ -60,13 +60,13 @@ func _physics_process(delta: float) -> void:
 	pass # Replace with function body.
 
 	if Input.is_action_pressed("sprint"):
-		SPEED = 550
+		SPEED = 600
 		acceleration = 40
-	
+		JUMP_VELOCITY = -450
 	else:
 		SPEED = 400
 		acceleration = 20
-
+		JUMP_VELOCITY = -400
 
 	#if velocity.x +600 or -600:
 		#JUMP_VELOCITY = 500
@@ -85,11 +85,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY + 100
 	else: if Input.is_action_just_pressed("small_jump"):
 		velocity.y = +400
-		#velocity.x = 0
+		
 
 
-	#if Input.is_action_just_pressed("high_jump") and is_on_floor():
-			#velocity.y = JUMP_VELOCITY -50
-	#else: if Input.is_action_just_pressed("high_jump"):
-		#velocity.y = +400
-		##velocity.x = 0
+	if Input.is_action_just_pressed("high_jump") and is_on_floor():
+			velocity.y = JUMP_VELOCITY + 100
+	else: if Input.is_action_just_pressed("high_jump"):
+		velocity.y = -500
+		

@@ -9,7 +9,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	pass
-# dad added this
+
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if (body.name == "CharacterBody2D"):
@@ -20,7 +20,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if (y_delta >15): 
 			queue_free()
 			body.jump()
-			game_manager.add_points(0)
+			game_manager.add_points(99999999999999)
 		else:
 			
 			
