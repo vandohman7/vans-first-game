@@ -348,10 +348,10 @@ position = Vector2(1871, 571)
 position = Vector2(1211, 687)
 
 [node name="enemy13" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(2486, 491)
+position = Vector2(2487, 495)
 
 [node name="enemy14" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(2487, 458)
+position = Vector2(2487, 465)
 
 [node name="enemy15" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(2230, 553)
