@@ -1244,4 +1244,22 @@ offset_bottom = 790.0
 text = "x to attack
 "
 
+[node name="Label5" type="Label" parent="."]
+offset_left = 184.0
+offset_top = 947.0
+offset_right = 270.0
+offset_bottom = 996.0
+text = "if you fall 
+you restart"
+
+[node name="Label6" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.035
+anchor_bottom = 0.035
+offset_left = 442.0
+offset_top = 770.0
+offset_right = 556.68
+offset_bottom = 770.32
+text = "y shift or zl to sprint"
+
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
