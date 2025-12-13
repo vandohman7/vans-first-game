@@ -115,10 +115,39 @@ offset_right = 791.0
 offset_bottom = 409.0
 focus_neighbor_left = NodePath("../level 3")
 focus_neighbor_top = NodePath("../level 2")
+focus_neighbor_bottom = NodePath("../level 6")
 focus_next = NodePath("../tutorial")
 theme_override_font_sizes/font_size = 30
 text = "level 4
 "
+
+[node name="level 5" type="Button" parent="."]
+texture_filter = 1
+offset_left = 358.0
+offset_top = 412.0
+offset_right = 551.0
+offset_bottom = 466.0
+focus_neighbor_left = NodePath("../level 3")
+focus_neighbor_top = NodePath("../level 2")
+focus_neighbor_right = NodePath("../level 6")
+focus_neighbor_bottom = NodePath("../tutorial")
+focus_next = NodePath("../tutorial")
+theme_override_font_sizes/font_size = 30
+text = "level 5
+"
+
+[node name="level 6" type="Button" parent="."]
+texture_filter = 1
+offset_left = 599.0
+offset_top = 411.0
+offset_right = 792.0
+offset_bottom = 465.0
+focus_neighbor_left = NodePath("../level 3")
+focus_neighbor_top = NodePath("../level 2")
+focus_neighbor_bottom = NodePath("../tutorial")
+focus_next = NodePath("../tutorial")
+theme_override_font_sizes/font_size = 30
+text = "level 6"
 
 [node name="music" parent="." instance=ExtResource("4_wu84c")]
 position = Vector2(573, 319)
@@ -142,3 +171,5 @@ quit                    down"
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="level 3" to="." method="_on_level_3_pressed"]
 [connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level 5" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level 6" to="." method="_on_level_4_pressed"]

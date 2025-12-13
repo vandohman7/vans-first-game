@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bg22jg37180j4"]
+[gd_scene load_steps=13 format=3 uid="uid://d20a125xinghm"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_5co2d"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="3_qamva"]
@@ -217,7 +217,7 @@ layer_0/tile_data = PackedInt32Array(2359266, 393216, 1, 2424802, 393216, 1, 249
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_aekgh")]
 texture_filter = 1
-position = Vector2(79, 560)
+position = Vector2(23, 589)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
