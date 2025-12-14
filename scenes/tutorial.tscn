@@ -1262,4 +1262,11 @@ offset_right = 556.68
 offset_bottom = 770.32
 text = "y shift or zl to sprint"
 
+[node name="Label7" type="Label" parent="."]
+offset_left = 1022.0
+offset_top = 704.0
+offset_right = 1218.0
+offset_bottom = 727.0
+text = "jump in the air to fast fall"
+
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
