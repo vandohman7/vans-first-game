@@ -265,7 +265,7 @@ position = Vector2(2689, 493)
 [node name="charry" type="Node" parent="."]
 
 [node name="berry_collectable" parent="charry" instance=ExtResource("7_5x1dc")]
-position = Vector2(335, 550)
+position = Vector2(336, 555)
 
 [node name="berry_collectable2" parent="charry" instance=ExtResource("7_5x1dc")]
 position = Vector2(491, 582)

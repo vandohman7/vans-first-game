@@ -8,8 +8,9 @@ var acceleration = 20
 
 var inAir = 0
 
+var entitiesInAttackRange := []
 
-
+var facing_dir: String = "right"
 var fastfall = false
 
 #func sprint(): 
@@ -20,6 +21,10 @@ func jump():
 	velocity.y = JUMP_VELOCITY + 200
 pass
 
+
+#func _process(delta: float) -> void:
+	
+	####### ATTACKING ######3
 
 
 
@@ -44,14 +49,27 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, SPEED * direction, acceleration)
 		
 	else:
-		#howLongKeyPressed = 0
 		velocity.x = move_toward(velocity.x, 0, acceleration)
 
 	move_and_slide()
 	
-	var isLeft = velocity.x < 0
-	sprite_2d.flip_h = isLeft
+	#var isLeft = velocity.x < -1
+	#sprite_2d.flip_h = isLeft
 
+	if Input.is_action_just_pressed("left"):
+		facing_dir = "left"
+	if Input.is_action_just_pressed("right"):
+		facing_dir = "right"
+	
+	sprite_2d.flip_h = facing_dir == "left"	
+		
+	#if facing_dir == "left":
+		#sprite_2d.flip_h = true
+	#else: 
+		#sprite_2d.flip_h = false
+		
+	
+	#sprite_2d.flip_h = facing_dir
 
 	if velocity.x > 1 or velocity.x < -1:sprite_2d.animation = "running"
 	 
@@ -99,10 +117,20 @@ func _physics_process(delta: float) -> void:
 		get_tree().quit()
 
 
-
-
 	#if Input.is_action_just_pressed("high_jump") and is_on_floor():
 			#velocity.y = JUMP_VELOCITY -50
 	#else: if Input.is_action_just_pressed("high_jump"):
 		#velocity.y = +400
 			###velocity.x = 0
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print('added ' + body.name)
+	var alreadyIn = entitiesInAttackRange.has(body)
+	var isSelf = body.name == "CharacterBody2D"
+		
+	if not alreadyIn and not isSelf:
+		entitiesInAttackRange.push_front(body)
+	print(entitiesInAttackRange.size())
+	
+	
