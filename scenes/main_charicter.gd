@@ -16,13 +16,9 @@ var fastfall = false
 var attackAnimationTime = .4
 var isAttacking: float = 0
 
-#func sprint(): 
 
 		
 
-func jump():
-	velocity.y = JUMP_VELOCITY + 200
-pass
 
 
 #func _process(delta: float) -> void:
