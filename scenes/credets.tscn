@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://bq4thdidwuga8"]
+
+[ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://scenes/scripts/main_menu.gd" id="1_aijwg"]
+[ext_resource type="Texture2D" uid="uid://b31it1vdcd4p3" path="res://scenes/images/Gemini_Generated_Image_i60m07i60m07i60m (1).png" id="2_ig207"]
+[ext_resource type="Texture2D" uid="uid://b5klp1ca0jdye" path="res://scenes/images/game_main_menu.png" id="3_grmke"]
+[ext_resource type="Script" uid="uid://c6gwa3i4t67ns" path="res://scenes/button.gd" id="5_aijwg"]
+[ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="5_k37rc"]
+
+[node name="credets" type="Node"]
+script = ExtResource("1_aijwg")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -297.0
+offset_bottom = 283.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ig207")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.256
+anchor_right = 0.5
+anchor_bottom = 0.256
+offset_left = -323.0
+offset_top = -72.888
+offset_right = 341.0
+offset_bottom = 73.112
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_grmke")
+
+[node name="music" parent="." instance=ExtResource("5_k37rc")]
+position = Vector2(573, 319)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 459.0
+offset_top = 275.0
+offset_right = 602.0
+offset_bottom = 310.0
+theme_override_font_sizes/font_size = 25
+text = "Evan Alberg"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 586.0
+offset_top = 229.0
+offset_right = 653.0
+offset_bottom = 271.0
+theme_override_font_sizes/font_size = 30
+text = "devs"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 634.0
+offset_top = 278.0
+offset_right = 779.0
+offset_bottom = 313.0
+theme_override_font_sizes/font_size = 25
+text = "Evan Reyzer"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 572.0
+offset_top = 322.0
+offset_right = 670.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 30
+text = "sprites"
+
+[node name="Label5" type="Label" parent="."]
+offset_left = 547.0
+offset_top = 370.0
+offset_right = 703.0
+offset_bottom = 405.0
+theme_override_font_sizes/font_size = 25
+text = "Milo Johnson"
+
+[node name="Label6" type="Label" parent="."]
+offset_left = 547.0
+offset_top = 416.0
+offset_right = 708.0
+offset_bottom = 458.0
+theme_override_font_sizes/font_size = 30
+text = "playtesters"
+
+[node name="Label7" type="Label" parent="."]
+offset_left = 454.0
+offset_top = 470.0
+offset_right = 605.0
+offset_bottom = 505.0
+theme_override_font_sizes/font_size = 25
+text = "Selah Alberg"
+
+[node name="Label8" type="Label" parent="."]
+offset_left = 642.0
+offset_top = 472.0
+offset_right = 798.0
+offset_bottom = 507.0
+theme_override_font_sizes/font_size = 25
+text = "Milo Johnson"
+
+[node name="main_menu" type="Button" parent="."]
+offset_left = 602.0
+offset_top = 521.0
+offset_right = 647.0
+offset_bottom = 552.0
+text = "back"
+script = ExtResource("5_aijwg")
+
+[connection signal="pressed" from="main_menu" to="." method="_on_main_menu_pressed"]
