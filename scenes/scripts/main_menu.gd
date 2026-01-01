@@ -43,3 +43,7 @@ func _on_main_menu_pressed() -> void:
 
 func _on_credets_pressed() -> void:
 	_load_scene("credets.tscn")
+
+
+func _on_button_pressed() -> void:   #idk why i cant just say _on_quit_pressed
+	get_tree().quit()

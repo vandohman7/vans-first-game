@@ -52,7 +52,7 @@ offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath("../level 1")
-focus_neighbor_top = NodePath("../credets")
+focus_neighbor_top = NodePath("../quit")
 focus_neighbor_right = NodePath("../level 2")
 focus_neighbor_bottom = NodePath("../level 1")
 focus_next = NodePath("../level 1")
@@ -179,8 +179,21 @@ offset_top = 479.0
 offset_right = 613.0
 offset_bottom = 510.0
 focus_neighbor_top = NodePath("../level 6")
+focus_neighbor_bottom = NodePath("../quit")
 text = "credets"
 script = SubResource("GDScript_8ln24")
+
+[node name="quit" type="Button" parent="."]
+anchors_preset = -1
+anchor_right = 0.034
+anchor_bottom = 0.048
+offset_left = 547.0
+offset_top = 514.0
+offset_right = 573.832
+offset_bottom = 513.896
+focus_neighbor_top = NodePath("../credets")
+focus_neighbor_bottom = NodePath("../tutorial")
+text = "quit"
 
 [connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
@@ -190,3 +203,4 @@ script = SubResource("GDScript_8ln24")
 [connection signal="pressed" from="level 5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="level 6" to="." method="_on_level_6_pressed"]
 [connection signal="pressed" from="credets" to="." method="_on_credets_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_button_pressed"]
