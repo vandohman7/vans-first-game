@@ -76,6 +76,8 @@ func _physics_process(delta: float) -> void:
 
 	if isAttacking == 0 and Input.is_action_just_pressed("attack"):
 		sprite_2d.animation = "attack"
+		
+		
 		#sprite_2d.frame = 0
 		#sprite_2d.play()		
 		isAttacking = .000001;
@@ -90,8 +92,10 @@ func _physics_process(delta: float) -> void:
 			#destroy_node(entitiesInAttackRange[0])
 		# kill things in hitbox
 		pass
-		
-		
+	if (isAttacking > 0):
+		velocity.x = 0
+
+
 	if isAttacking >= attackAnimationTime:
 		isAttacking = 0.0
 		
@@ -99,6 +103,7 @@ func _physics_process(delta: float) -> void:
 		if velocity.x > 1 or velocity.x < -1:
 			if sprite_2d.is_playing(): 
 				sprite_2d.animation = "running"
+				
 			else:
 				sprite_2d.play("running")
 		else: 
