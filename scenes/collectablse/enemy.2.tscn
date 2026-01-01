@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://1w5srlvohc2l"]
+
+[ext_resource type="Texture2D" uid="uid://gtjykhir1dxj" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Ninja Frog/Fall (32x32).png" id="1_1gwqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g7kma"]
+size = Vector2(35, 39)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, -3.5)
+shape = SubResource("RectangleShape2D_g7kma")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, -8)
+scale = Vector2(1.4375, 1.5)
+texture = ExtResource("1_1gwqc")

@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://o8gsr3n5tpxw"]
+[gd_scene load_steps=7 format=3 uid="uid://o8gsr3n5tpxw"]
 
 [ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://scenes/scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b31it1vdcd4p3" path="res://scenes/images/Gemini_Generated_Image_i60m07i60m07i60m (1).png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://b5klp1ca0jdye" path="res://scenes/images/game_main_menu.png" id="2_bqqt6"]
 [ext_resource type="Script" uid="uid://t8fr1rupqn75" path="res://scenes/tutorial.gd" id="4_8ln24"]
 [ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="4_wu84c"]
+
+[sub_resource type="GDScript" id="GDScript_8ln24"]
+script/source = "extends Button
+"
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_bqqt6")
@@ -48,6 +52,7 @@ offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 2
 focus_neighbor_left = NodePath("../level 1")
+focus_neighbor_top = NodePath("../credets")
 focus_neighbor_right = NodePath("../level 2")
 focus_neighbor_bottom = NodePath("../level 1")
 focus_next = NodePath("../level 1")
@@ -131,7 +136,7 @@ offset_bottom = 466.0
 focus_neighbor_left = NodePath("../level 3")
 focus_neighbor_top = NodePath("../level 3")
 focus_neighbor_right = NodePath("../level 6")
-focus_neighbor_bottom = NodePath("../tutorial")
+focus_neighbor_bottom = NodePath("../credets")
 focus_next = NodePath("../tutorial")
 theme_override_font_sizes/font_size = 30
 text = "level 5
@@ -145,7 +150,8 @@ offset_right = 792.0
 offset_bottom = 465.0
 focus_neighbor_left = NodePath("../level 5")
 focus_neighbor_top = NodePath("../level 4")
-focus_neighbor_bottom = NodePath("../tutorial")
+focus_neighbor_right = NodePath("../credets")
+focus_neighbor_bottom = NodePath("../credets")
 focus_next = NodePath("../tutorial")
 theme_override_font_sizes/font_size = 30
 text = "level 6"
@@ -167,6 +173,15 @@ text = "main menu      right
 restart               left
 quit                    down"
 
+[node name="credets" type="Button" parent="."]
+offset_left = 547.0
+offset_top = 479.0
+offset_right = 613.0
+offset_bottom = 510.0
+focus_neighbor_top = NodePath("../level 6")
+text = "credets"
+script = SubResource("GDScript_8ln24")
+
 [connection signal="pressed" from="tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="level 1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level 2" to="." method="_on_level_2_pressed"]
@@ -174,3 +189,4 @@ quit                    down"
 [connection signal="pressed" from="level 4" to="." method="_on_level_4_pressed"]
 [connection signal="pressed" from="level 5" to="." method="_on_level_5_pressed"]
 [connection signal="pressed" from="level 6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="credets" to="." method="_on_credets_pressed"]

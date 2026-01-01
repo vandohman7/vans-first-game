@@ -35,3 +35,11 @@ func _on_level_5_pressed() -> void:
 
 func _on_level_6_pressed() -> void:
 	_load_scene("level 6.tscn")
+
+
+func _on_main_menu_pressed() -> void:
+	_load_scene("main_menu.tscn")
+
+
+func _on_credets_pressed() -> void:
+	_load_scene("credets.tscn")
