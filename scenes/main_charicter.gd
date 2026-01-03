@@ -4,11 +4,12 @@ var SPEED = 400.0
 var JUMP_VELOCITY = -400.0
 #var howLongKeyPressed = 0
 var acceleration = 20
+
 @onready var sprite_2d = $Sprite2D
 
 var inAir = 0
 
-var entitiesInAttackRange: Array[Node2D] = []
+#var entitiesInAttackRange: Array[Node2D] = []
 
 var facing_dir: String = "right"
 var fastfall = false
@@ -81,8 +82,8 @@ func _physics_process(delta: float) -> void:
 		isAttacking += delta
 		
 	if (isAttacking > 0):
-		if entitiesInAttackRange.size():
-			pass
+		#if entitiesInAttackRange.size():
+			#pass
 			#for row in entitiesInAttackRange:
 				#destroy_node(row)
 			#destroy_node(entitiesInAttackRange[0])
@@ -161,23 +162,25 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	print('added ' + body.name)
-	var alreadyIn = entitiesInAttackRange.has(body)
-	var isSelf = body.name == "CharacterBody2D"
-		
-	if not alreadyIn and not isSelf:
-		entitiesInAttackRange.push_front(body)
-	print(entitiesInAttackRange.size())
+	pass
+	#var alreadyIn = entitiesInAttackRange.has(body)
+	#var isSelf = body.name == "CharacterBody2D"
+		#
+	#if not alreadyIn and not isSelf:
+		#entitiesInAttackRange.push_front(body)
+	#print(entitiesInAttackRange.size())
 	
 	
 # Assumes this function is called with the Node2D reference you want to destroy.
 func destroy_node(target_node: Node2D):
-	if is_instance_valid(target_node):
-		print("Destroying node: ", target_node.name)
-		target_node.queue_free()
-	else:
-		# This handles cases where the node might have already been destroyed 
-		# by something else just before this function was called.
-		print("Error: Target node is already invalid or destroyed.")
+	#if is_instance_valid(target_node):
+		#print("Destroying node: ", target_node.name)
+		#target_node.queue_free()
+	#else:
+		## This handles cases where the node might have already been destroyed 
+		## by something else just before this function was called.
+		#print("Error: Target node is already invalid or destroyed.")
+	pass
 
 
 
