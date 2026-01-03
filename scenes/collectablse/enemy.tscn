@@ -1,7 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://gd6lelmjptj0"]
+[gd_scene load_steps=19 format=3 uid="uid://gd6lelmjptj0"]
 
 [ext_resource type="Texture2D" uid="uid://8oresfx3a04x" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://dcbqffce7y1wd" path="res://scenes/scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://bvohutngysalv" path="res://scenes/components/health_component.tscn" id="3_0xr65"]
+[ext_resource type="PackedScene" uid="uid://c7rdgducx0q0n" path="res://scenes/components/hitbox_component.tscn" id="4_mxbal"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
 atlas = ExtResource("1_7k104")
@@ -92,7 +94,7 @@ animations = [{
 size = Vector2(27, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
-size = Vector2(29, 30)
+size = Vector2(29, 31)
 
 [node name="enemy" type="RigidBody2D"]
 script = ExtResource("1_md0e3")
@@ -109,10 +111,14 @@ frame_progress = 0.3707389
 position = Vector2(4.5, -1.5)
 shape = SubResource("RectangleShape2D_4gyqm")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="HealthComponent" parent="." instance=ExtResource("3_0xr65")]
+max_health = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(4.5, -2)
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_mxbal")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(4.5, -2.5)
 shape = SubResource("RectangleShape2D_4ra3w")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="HitboxComponent" to="." method="_on_hitbox_component_body_entered"]
