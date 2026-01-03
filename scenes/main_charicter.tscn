@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://bk7erndjgnx4x"]
+[gd_scene load_steps=39 format=3 uid="uid://bk7erndjgnx4x"]
 
 [ext_resource type="Script" uid="uid://cqbewn8p8h336" path="res://scenes/main_charicter.gd" id="1_er63p"]
 [ext_resource type="Texture2D" uid="uid://c2w6anfsq76gg" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Idle.png" id="1_pdq4l"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="6_l3582"]
 [ext_resource type="Script" uid="uid://cwouhuyuxsh6a" path="res://scenes/components/health_component.gd" id="7_msvtj"]
 [ext_resource type="PackedScene" uid="uid://c7rdgducx0q0n" path="res://scenes/components/hitbox_component.tscn" id="8_2cj72"]
+[ext_resource type="Script" uid="uid://drvl8ca4mcxao" path="res://scenes/components/hurtbox_component.gd" id="9_mjggn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dx2si"]
 atlas = ExtResource("2_0q8bm")
@@ -215,6 +216,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_er63p"]
 size = Vector2(24, 31.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjggn"]
+size = Vector2(24, 32)
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l3582"]
 radius = 12.0
 height = 28.0
@@ -246,11 +250,22 @@ script = ExtResource("7_msvtj")
 max_health = 100.0
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_2cj72")]
+visible = false
 health_component = NodePath("../HealthComponent")
 
-[node name="attack_hitbox" type="CollisionShape2D" parent="HitboxComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(3, 0)
+shape = SubResource("RectangleShape2D_mjggn")
+
+[node name="HurtboxComponent" type="Area2D" parent="."]
+scale = Vector2(0.99999994, 1)
+script = ExtResource("9_mjggn")
+
+[node name="attack_hitbox" type="CollisionShape2D" parent="HurtboxComponent"]
 position = Vector2(29.000004, 1)
 scale = Vector2(0.99999994, 1)
 shape = SubResource("CapsuleShape2D_l3582")
+disabled = true
 
 [connection signal="animation_finished" from="Sprite2D" to="." method="_on_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="HurtboxComponent" to="HurtboxComponent" method="_on_area_entered"]

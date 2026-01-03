@@ -6,6 +6,7 @@ var JUMP_VELOCITY = -400.0
 var acceleration = 20
 
 @onready var sprite_2d = $Sprite2D
+@onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
 
 var inAir = 0
 
@@ -79,6 +80,7 @@ func _physics_process(delta: float) -> void:
 		#sprite_2d.play()		
 		isAttacking = .000001;
 	elif (isAttacking > 0):
+		attack_hitbox.disabled = false
 		isAttacking += delta
 		
 	if (isAttacking > 0):
@@ -97,6 +99,7 @@ func _physics_process(delta: float) -> void:
 		isAttacking = 0.0
 		
 	if isAttacking == 0.0:
+		attack_hitbox.disabled = true
 		if velocity.x > 1 or velocity.x < -1:
 			if sprite_2d.is_playing(): 
 				sprite_2d.animation = "running"
@@ -181,8 +184,3 @@ func destroy_node(target_node: Node2D):
 		## by something else just before this function was called.
 		#print("Error: Target node is already invalid or destroyed.")
 	pass
-
-
-
-		
-		
