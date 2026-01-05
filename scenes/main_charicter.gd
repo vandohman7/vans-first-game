@@ -68,16 +68,7 @@ func _physics_process(delta: float) -> void:
 		visuals.scale.x = 1
 	
 	#visuals.scale.x()
-	print(visuals.scale.x)
-	#sprite_2d.flip_h = facing_dir == "left"	
-		
-	#if facing_dir == "left":
-		#sprite_2d.flip_h = true
-	#else: 
-		#sprite_2d.flip_h = false
-
-	#set_proper
-	#sprite_2d.flip_h = facing_dir
+	#print(visuals.scale.x)
 
 
 	if isAttacking == 0 and Input.is_action_just_pressed("attack"):
@@ -139,3 +130,8 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("quit"):
 		get_tree().quit()
+
+
+func _on_health_component_health_is_zero() -> void:
+	print("died")
+	get_tree().reload_current_scene()
