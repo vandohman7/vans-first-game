@@ -1,11 +1,14 @@
+class_name HurtboxComponent
 extends Area2D
 
+
+@export_category('Stats')
+@export var hurtbox_damage: float = 10
 
 
 
 func _on_area_entered(area: Area2D) -> void:
-	print("hurtbox sees something", area.name)
 	if area is HitboxComponent:
-		var hitbox = area as HitboxComponent
-		print("doing 50 damage to ", area.name)
-		hitbox.damage(50)
+		print("hurtbox sees HitboxComponent ", area.name)
+		var _hitbox = area as HitboxComponent
+		_hitbox.damage(hurtbox_damage)

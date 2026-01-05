@@ -3,6 +3,9 @@ class_name HealthComponent
 
 @export_category('Stats')
 @export var max_health: float = 10
+
+signal health_is_zero
+
 var health: float = 10
 
 
@@ -20,7 +23,9 @@ func heal_damage(amount: float):
 	
 func health_changed():
 	health = clamp(health,0,max_health)
-	print(health)
+	#print(health)
 	if health <= 0:
-		get_parent().queue_free()
+		print("DEAD")
+		health_is_zero.emit()
+		#get_parent().queue_free()
 	
