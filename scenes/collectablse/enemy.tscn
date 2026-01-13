@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://gd6lelmjptj0"]
+[gd_scene load_steps=21 format=3 uid="uid://gd6lelmjptj0"]
 
 [ext_resource type="Texture2D" uid="uid://8oresfx3a04x" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://dcbqffce7y1wd" path="res://scenes/scripts/enemy.gd" id="1_md0e3"]
@@ -92,10 +92,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gyqm"]
-size = Vector2(27, 29)
+size = Vector2(25.46875, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mxbal"]
+size = Vector2(24, 29.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
-size = Vector2(27, 29)
+size = Vector2(27.000004, 30.75)
 
 [node name="enemy" type="RigidBody2D"]
 script = ExtResource("1_md0e3")
@@ -109,7 +112,7 @@ autoplay = "default"
 frame_progress = 0.3707389
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.5, -1.5)
+position = Vector2(4, -1)
 shape = SubResource("RectangleShape2D_4gyqm")
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_0xr65")]
@@ -119,16 +122,17 @@ max_health = 20.0
 collision_layer = 2
 health_component = NodePath("../HealthComponent")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
-position = Vector2(4.5, -1.5)
-shape = SubResource("RectangleShape2D_4ra3w")
+[node name="hurtbox" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(5, -1.25)
+shape = SubResource("RectangleShape2D_mxbal")
 
 [node name="HurtboxComponent" parent="." instance=ExtResource("5_mxbal")]
+position = Vector2(-43, -2)
 collision_layer = 2
 hurtbox_damage = 2000.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
-position = Vector2(4.5, -1.5)
+[node name="hitbox" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(47.500004, 0.625)
 shape = SubResource("RectangleShape2D_4ra3w")
 
 [connection signal="health_is_zero" from="HealthComponent" to="." method="_on_health_component_health_is_zero"]
