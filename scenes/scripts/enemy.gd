@@ -31,7 +31,7 @@ func refresh():
 			#game_manager.add_points(0)
 		##else:
 			#get_tree().reload_current_scene()
-
+#yay
 
 func _on_health_component_health_is_zero() -> void:
 	print("ENEMY DIED")
