@@ -467,6 +467,7 @@ hframes = 4
 [node name="HurtboxComponent" parent="visuals" instance=ExtResource("5_mjggn")]
 position = Vector2(2, 0)
 collision_mask = 2
+hurtbox_damage = 20.0
 
 [node name="attack_hitbox" type="CollisionShape2D" parent="visuals/HurtboxComponent"]
 position = Vector2(29.000002, 3)
