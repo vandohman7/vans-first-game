@@ -72,7 +72,7 @@ func _physics_process(delta: float) -> void:
 
 
 	if isAttacking == 0 and Input.is_action_just_pressed("attack"):
-		animation.play("attack")	
+		animation.play("attack")
 		isAttacking = .000001;
 		
 	elif (isAttacking > 0):
@@ -111,8 +111,14 @@ func _physics_process(delta: float) -> void:
 	else: if Input.is_action_just_pressed("jump"):
 		velocity.y = +400
 		fastfall = true
-	
+		
 
+	if Input.is_action_just_pressed("dash") and is_on_floor():
+		velocity.y = -100
+		if facing_dir == ("right"):
+			velocity.x = 650
+		else: velocity.x = -650
+		
 
 	if Input.is_action_just_pressed("small_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY + 100
