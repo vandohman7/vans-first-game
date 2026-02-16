@@ -265,7 +265,7 @@ position = Vector2(2689, 493)
 [node name="charry" type="Node" parent="."]
 
 [node name="berry_collectable" parent="charry" instance=ExtResource("7_5x1dc")]
-position = Vector2(336, 555)
+position = Vector2(377, 554)
 
 [node name="berry_collectable2" parent="charry" instance=ExtResource("7_5x1dc")]
 position = Vector2(491, 582)
@@ -283,7 +283,7 @@ position = Vector2(909, 700)
 position = Vector2(1405, 657)
 
 [node name="berry_collectable7" parent="charry" instance=ExtResource("7_5x1dc")]
-position = Vector2(1471, 618)
+position = Vector2(1492, 619)
 
 [node name="berry_collectable8" parent="charry" instance=ExtResource("7_5x1dc")]
 position = Vector2(1334, 681)
@@ -315,7 +315,7 @@ position = Vector2(1760, 538)
 position = Vector2(255, 592)
 
 [node name="enemy2" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(332, 559)
+position = Vector2(375, 559)
 
 [node name="enemy3" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(748, 702)
@@ -324,10 +324,10 @@ position = Vector2(748, 702)
 position = Vector2(1145, 639)
 
 [node name="enemy5" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(1145, 608)
+position = Vector2(1095, 684)
 
 [node name="enemy6" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(1145, 578)
+position = Vector2(1173, 686)
 
 [node name="enemy7" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(1326, 686)
@@ -336,7 +336,7 @@ position = Vector2(1326, 686)
 position = Vector2(530, 591)
 
 [node name="enemy9" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(1468, 619)
+position = Vector2(1486, 623)
 
 [node name="enemy10" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(1755, 542)
@@ -348,10 +348,10 @@ position = Vector2(1871, 571)
 position = Vector2(1211, 687)
 
 [node name="enemy13" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(2487, 495)
+position = Vector2(87, 205)
 
 [node name="enemy14" parent="enemy" instance=ExtResource("8_vx57a")]
-position = Vector2(2487, 465)
+position = Vector2(2648, 493)
 
 [node name="enemy15" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(2230, 553)

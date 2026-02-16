@@ -1,8 +1,7 @@
-[gd_scene load_steps=17 format=3 uid="uid://cm63mh8o4pd5g"]
+[gd_scene load_steps=16 format=3 uid="uid://cm63mh8o4pd5g"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_26ho8"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="2_6phv7"]
-[ext_resource type="PackedScene" uid="uid://d2d8j4n3akmpi" path="res://scenes/scripts/pause_menu.tscn" id="3_5a11g"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="3_ap4fx"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="4_5j085"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="4_mhe28"]
@@ -1176,12 +1175,22 @@ position = Vector2(87, 580)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("3_5a11g")]
+[node name="pause_menu" parent="CharacterBody2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 visible = false
 offset_left = 4.0
 offset_top = -6.0
 offset_right = 4.0
 offset_bottom = -6.0
+script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1226,13 +1235,7 @@ position = Vector2(2212, 440)
 position = Vector2(2166, 584)
 
 [node name="enemy3" parent="enemys" instance=ExtResource("5_msjbv")]
-position = Vector2(2982, 394)
-
-[node name="enemy4" parent="enemys" instance=ExtResource("5_msjbv")]
-position = Vector2(2982, 364)
-
-[node name="enemy5" parent="enemys" instance=ExtResource("5_msjbv")]
-position = Vector2(2983, 334)
+position = Vector2(2986, 392)
 
 [node name="enemy6" parent="enemys" instance=ExtResource("5_msjbv")]
 position = Vector2(895, 586)

@@ -1219,14 +1219,14 @@ offset_left = 93.0
 offset_top = 751.0
 offset_right = 168.0
 offset_bottom = 751.32
-text = "b to jump"
+text = "B to jump"
 
 [node name="Label2" type="Label" parent="."]
 offset_left = 1372.0
 offset_top = 750.0
 offset_right = 1491.0
 offset_bottom = 773.0
-text = "a to short jump"
+text = "A to short jump"
 
 [node name="Label3" type="Label" parent="."]
 offset_left = 255.0
@@ -1241,7 +1241,7 @@ offset_left = 811.0
 offset_top = 741.0
 offset_right = 893.0
 offset_bottom = 790.0
-text = "x to attack
+text = "ZR to attack
 "
 
 [node name="Label5" type="Label" parent="."]
@@ -1258,9 +1258,9 @@ anchor_right = 0.035
 anchor_bottom = 0.035
 offset_left = 442.0
 offset_top = 770.0
-offset_right = 556.68
+offset_right = 473.68
 offset_bottom = 770.32
-text = "y shift or zl to sprint"
+text = "R to dash"
 
 [node name="Label7" type="Label" parent="."]
 offset_left = 1022.0
