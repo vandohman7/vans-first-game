@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var SPEED = 400.0
-var JUMP_VELOCITY = -400.0
+var JUMP_VELOCITY = -430.0
 #var howLongKeyPressed = 0
 var acceleration = 20
 var jumpinair = true
@@ -121,7 +121,7 @@ func _physics_process(delta: float) -> void:
 		
 
 	if Input.is_action_just_pressed("small_jump") and is_on_floor():
-		velocity.y = JUMP_VELOCITY + 100
+		velocity.y = JUMP_VELOCITY + 130
 	elif Input.is_action_just_pressed("small_jump"):
 		velocity.y = +400
 		#velocity.x = 0
