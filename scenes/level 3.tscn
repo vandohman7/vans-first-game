@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i5a0ryoitmai"]
+[gd_scene load_steps=16 format=3 uid="uid://i5a0ryoitmai"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_25uk8"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_a3576"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="4_mi1ge"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="5_ihmap"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="6_pbsnm"]
-[ext_resource type="PackedScene" uid="uid://d2d8j4n3akmpi" path="res://scenes/scripts/pause_menu.tscn" id="7_xfy3g"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="8_pnvxl"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="9_xn48u"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="10_udw07"]
@@ -1145,13 +1144,13 @@ position = Vector2(648, 695)
 position = Vector2(1826, 766)
 
 [node name="berry_collectable5" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
-position = Vector2(1383, 554)
+position = Vector2(1383, 583)
 
 [node name="berry_collectable6" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
-position = Vector2(1384, 582)
+position = Vector2(1383, 583)
 
 [node name="berry_collectable7" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
-position = Vector2(1383, 527)
+position = Vector2(1383, 583)
 
 [node name="berry_collectable8" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
 position = Vector2(2680, 540)
@@ -1160,7 +1159,7 @@ position = Vector2(2680, 540)
 position = Vector2(2883, 542)
 
 [node name="berry_collectable10" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
-position = Vector2(3380, 769)
+position = Vector2(3404, 770)
 
 [node name="pineapples" type="Node" parent="TileMap"]
 
@@ -1180,12 +1179,22 @@ position = Vector2(129, 294)
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(3, -1)
 
-[node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("7_xfy3g")]
+[node name="pause_menu" parent="CharacterBody2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 visible = false
 offset_left = 4.0
 offset_top = -6.0
 offset_right = 4.0
 offset_bottom = -6.0
+script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1236,27 +1245,21 @@ position = Vector2(422, 314)
 position = Vector2(313, 314)
 
 [node name="enemy6" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(1379, 584)
+position = Vector2(1376, 584)
 
 [node name="enemy5" parent="enemys" instance=ExtResource("10_udw07")]
 position = Vector2(1719, 777)
 
-[node name="enemy7" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(1379, 554)
-
-[node name="enemy8" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(1379, 524)
-
 [node name="enemy9" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(3378, 777)
+position = Vector2(3397, 777)
 
 [node name="enemy10" parent="enemys" instance=ExtResource("10_udw07")]
 position = Vector2(3421, 777)
 
 [node name="enemy11" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(3378, 746)
+position = Vector2(3380, 777)
 
 [node name="enemy12" parent="enemys" instance=ExtResource("10_udw07")]
-position = Vector2(3420, 746)
+position = Vector2(3437, 777)
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]

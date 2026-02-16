@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cc731kr5upt2t"]
+[gd_scene load_steps=16 format=3 uid="uid://cc731kr5upt2t"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_rxlrq"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_0g2ud"]
@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="4_bl6x6"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="5_lkx0t"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="6_6h45p"]
-[ext_resource type="PackedScene" uid="uid://d2d8j4n3akmpi" path="res://scenes/scripts/pause_menu.tscn" id="7_flahm"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="8_oydyu"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="9_sw0vo"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="10_oa5s5"]
@@ -1185,12 +1184,22 @@ position = Vector2(87, 580)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 
-[node name="pause_menu" parent="CharacterBody2D" instance=ExtResource("7_flahm")]
+[node name="pause_menu" parent="CharacterBody2D"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 0
+auto_translate_mode = 0
+editor_description = ""
 visible = false
 offset_left = 4.0
 offset_top = -6.0
 offset_right = 4.0
 offset_bottom = -6.0
+script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1247,7 +1256,7 @@ position = Vector2(1016, 489)
 position = Vector2(154, 201)
 
 [node name="enemy7" parent="enemys" instance=ExtResource("10_oa5s5")]
-position = Vector2(154, 171)
+position = Vector2(127, 200)
 
 [node name="enemy8" parent="enemys" instance=ExtResource("10_oa5s5")]
 position = Vector2(1977, 442)

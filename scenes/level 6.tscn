@@ -1239,19 +1239,19 @@ position = Vector2(186, 159)
 position = Vector2(779, 585)
 
 [node name="enemy7" parent="enemys" instance=ExtResource("9_1cyqr")]
-position = Vector2(782, 297)
+position = Vector2(819, 343)
 
 [node name="enemy8" parent="enemys" instance=ExtResource("9_1cyqr")]
-position = Vector2(878, 296)
+position = Vector2(884, 295)
 
 [node name="enemy9" parent="enemys" instance=ExtResource("9_1cyqr")]
-position = Vector2(687, 297)
+position = Vector2(723, 344)
 
 [node name="enemy10" parent="enemys" instance=ExtResource("9_1cyqr")]
-position = Vector2(829, 344)
+position = Vector2(842, 344)
 
 [node name="enemy11" parent="enemys" instance=ExtResource("9_1cyqr")]
-position = Vector2(732, 344)
+position = Vector2(744, 344)
 
 [node name="enemy12" parent="enemys" instance=ExtResource("9_1cyqr")]
 position = Vector2(130, 158)
