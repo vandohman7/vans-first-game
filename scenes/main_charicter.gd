@@ -4,7 +4,8 @@ var SPEED = 400.0
 var JUMP_VELOCITY = -430.0
 #var howLongKeyPressed = 0
 var acceleration = 20
-var jumpinair = true
+var zoominair = true
+
 #@onready var sprite_2d = $Sprite2D
 @onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
 @onready var animation: AnimationPlayer = $visuals/AnimationPlayer
@@ -45,7 +46,7 @@ func _physics_process(delta: float) -> void:
 
 	if is_on_floor():
 		fastfall = false
-		jumpinair = true
+		zoominair = true
 
 
 	var direction := Input.get_axis("left", "right")
@@ -112,13 +113,21 @@ func _physics_process(delta: float) -> void:
 		fastfall = true
 		
 
-	if Input.is_action_just_pressed("zoom") and jumpinair == true:
+	if Input.is_action_just_pressed("zoom") and zoominair == true:
 		velocity.y = -150
-		jumpinair = false
+		zoominair = false
 		if facing_dir == ("right"):
 			velocity.x = 800
 		else: velocity.x = -800
 		
+
+	if Input.is_action_just_pressed("turn_right"):
+		facing_dir = "right"
+		visuals.scale.x = 1
+	
+	if Input.is_action_just_pressed("turn_left"):
+		facing_dir = "left"
+		visuals.scale.x = -1
 
 	if Input.is_action_just_pressed("small_jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY + 130
