@@ -16,6 +16,9 @@ func take_damage(amount: float):
 	health = health - amount
 	health_changed()
 
+
+
+
 func heal_damage(amount: float):
 	health = health + amount
 	health_changed()
@@ -27,5 +30,5 @@ func health_changed():
 	if health <= 0:
 		print("DEAD")
 		health_is_zero.emit()
-		#get_parent().queue_free()
+		
 	

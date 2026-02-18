@@ -129,7 +129,7 @@ shape = SubResource("RectangleShape2D_mxbal")
 [node name="HurtboxComponent" parent="." instance=ExtResource("5_mxbal")]
 position = Vector2(-43, -2)
 collision_layer = 2
-hurtbox_damage = 2000.0
+hurtbox_damage = 50.0
 
 [node name="hitbox" type="CollisionShape2D" parent="HurtboxComponent"]
 position = Vector2(47.500004, 0.625)

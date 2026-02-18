@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://bk7erndjgnx4x"]
+[gd_scene load_steps=45 format=3 uid="uid://bk7erndjgnx4x"]
 
-[ext_resource type="Script" uid="uid://cqbewn8p8h336" path="res://scenes/main_charicter.gd" id="1_er63p"]
+[ext_resource type="Script" uid="uid://cqbewn8p8h336" path="res://scenes/scripts/main_charicter.gd" id="1_er63p"]
+[ext_resource type="Script" uid="uid://cwnfxjrqm78np" path="res://scenes/components/knockback_component.gd" id="1_mjggn"]
 [ext_resource type="Texture2D" uid="uid://c2w6anfsq76gg" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Idle.png" id="1_pdq4l"]
 [ext_resource type="Texture2D" uid="uid://ctwfq04ipc542" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Attack1.png" id="2_0q8bm"]
 [ext_resource type="Texture2D" uid="uid://bdvui86msfxq5" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Run.png" id="3_s5u5a"]
@@ -495,13 +496,17 @@ position = Vector2(1, 0)
 script = ExtResource("7_msvtj")
 max_health = 100.0
 
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_2cj72")]
-visible = false
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component", "knock_component") instance=ExtResource("8_2cj72")]
 collision_mask = 2
 health_component = NodePath("../HealthComponent")
+knock_component = NodePath("../KnockbackComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_mjggn")
+
+[node name="KnockbackComponent" type="Node2D" parent="."]
+script = ExtResource("1_mjggn")
+metadata/_custom_type_script = "uid://cwnfxjrqm78np"
 
 [connection signal="health_is_zero" from="HealthComponent" to="." method="_on_health_component_health_is_zero"]

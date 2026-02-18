@@ -6,8 +6,9 @@ var JUMP_VELOCITY = -430.0
 var acceleration = 20
 var zoominair = true
 
-#@onready var sprite_2d = $Sprite2D
-@onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
+
+#@onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
+#@onready var health_component: HealthComponent = $HealthComponent
 @onready var animation: AnimationPlayer = $visuals/AnimationPlayer
 @onready var visuals: Node2D = $visuals
 
@@ -143,8 +144,7 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 
 
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
+
 
 
 func _on_health_component_health_is_zero() -> void:
