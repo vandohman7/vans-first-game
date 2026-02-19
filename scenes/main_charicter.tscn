@@ -509,4 +509,16 @@ shape = SubResource("RectangleShape2D_mjggn")
 script = ExtResource("1_mjggn")
 metadata/_custom_type_script = "uid://cwnfxjrqm78np"
 
+[node name="hp label" type="Label" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = -565.0
+offset_top = 287.0
+offset_right = -513.0
+offset_bottom = 310.0
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.32785, 0.0058156196, 0.00078855857, 1)
+theme_override_font_sizes/font_size = 30
+text = "hp 100/100"
+
 [connection signal="health_is_zero" from="HealthComponent" to="." method="_on_health_component_health_is_zero"]

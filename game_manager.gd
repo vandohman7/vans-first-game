@@ -10,3 +10,7 @@ func add_points(num: int):
 
 	
 	label.text = "points " + str(points) + "/15"
+
+
+
+#health bar
