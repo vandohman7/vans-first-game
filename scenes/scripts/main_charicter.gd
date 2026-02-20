@@ -115,8 +115,9 @@ func _physics_process(delta: float) -> void:
 		get_tree().reload_current_scene()
 
 func _on_health_component_health_is_zero() -> void:
-	print("died")
-	get_tree().reload_current_scene()
+	#get_tree().call_deferred("free")
+	get_tree().call_deferred("reload_current_scene")
+	#get_tree().reload_current_scene()
 
 func _on_health_component_health_modified(health: float, _max_health: float) -> void:
 	hp_label.text = str(int(health))
