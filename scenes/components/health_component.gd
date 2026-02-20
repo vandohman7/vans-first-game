@@ -16,8 +16,6 @@ func _ready() -> void:
 func take_damage(amount: float):
 	health = health - amount
 	health_changed()
-	
-
 
 
 func heal_damage(amount: float):

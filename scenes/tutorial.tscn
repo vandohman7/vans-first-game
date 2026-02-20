@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://bnv84tsldwmv6"]
+[gd_scene load_steps=17 format=3 uid="uid://bnv84tsldwmv6"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_0epgs"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="2_g2equ"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="3_tbcdj"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="4_ej4tf"]
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="5_0hilk"]
+[ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="5_g2equ"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="6_wr8iv"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="7_e13mp"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="8_vrdqu"]
@@ -1115,13 +1116,13 @@ sources/2 = SubResource("TileSetAtlasSource_lquwl")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_272bh"]
 distance = 4.0
 
-[node name="Node" type="Node"]
+[node name="Node2" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 9.0
-offset_top = 13.0
-offset_right = 2004.0
-offset_bottom = 1420.0
+offset_left = 5.0
+offset_top = -8.0
+offset_right = 2000.0
+offset_bottom = 1399.0
 size_flags_horizontal = 0
 texture = ExtResource("1_0epgs")
 
@@ -1149,10 +1150,18 @@ position = Vector2(940, 827)
 [node name="berry_collectable5" parent="TileMap/berrys" instance=ExtResource("5_0hilk")]
 position = Vector2(1141, 758)
 
+[node name="Node" parent="TileMap/berrys" instance=ExtResource("5_g2equ")]
+
 [node name="pineapples" type="Node" parent="TileMap"]
 
 [node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
-position = Vector2(1213, 795)
+position = Vector2(1355, 809)
+
+[node name="pineapple2" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
+position = Vector2(1539, 774)
+
+[node name="banana" parent="TileMap/pineapples" instance=ExtResource("5_g2equ")]
+position = Vector2(1578, 723)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_g2equ")]
 texture_filter = 1
@@ -1207,11 +1216,6 @@ position = Vector2(1906, 826)
 
 [node name="Node" type="Node" parent="Node2"]
 
-[node name="pineapple" parent="." instance=ExtResource("6_wr8iv")]
-position = Vector2(1538, 772)
-
-[node name="traps" type="Node" parent="."]
-
 [node name="Label" type="Label" parent="."]
 anchors_preset = -1
 anchor_bottom = 0.035
@@ -1222,19 +1226,26 @@ offset_bottom = 704.32
 text = "B to jump"
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 1372.0
-offset_top = 750.0
-offset_right = 1491.0
-offset_bottom = 773.0
+offset_left = 1527.0
+offset_top = 799.0
+offset_right = 1647.0
+offset_bottom = 822.0
 text = "A to short jump"
 
+[node name="Label" type="Label" parent="Label2"]
+layout_mode = 0
+offset_left = -204.0
+offset_top = -48.0
+offset_right = -18.0
+offset_bottom = -25.0
+text = "pineapples give 5 points"
+
 [node name="Label3" type="Label" parent="."]
-offset_left = 548.0
-offset_top = 682.0
-offset_right = 721.0
-offset_bottom = 731.0
-text = "colect points via 
-cherys and pineapples"
+offset_left = 541.0
+offset_top = 749.0
+offset_right = 717.0
+offset_bottom = 772.0
+text = "berrys give you 1 point"
 
 [node name="Label4" type="Label" parent="."]
 offset_left = 798.0
@@ -1271,10 +1282,10 @@ text = "jump in the air to fast fall"
 [node name="Label8" type="Label" parent="."]
 anchors_preset = -1
 anchor_bottom = 0.035
-offset_left = 1711.0
-offset_top = 735.0
-offset_right = 1941.0
-offset_bottom = 735.32
+offset_left = 700.0
+offset_top = 971.0
+offset_right = 930.0
+offset_bottom = 971.32
 text = "right stick to change direction"
 
 [node name="Label9" type="Label" parent="."]
@@ -1285,5 +1296,12 @@ offset_top = 766.0
 offset_right = 148.0
 offset_bottom = 766.32
 text = "left stick to move"
+
+[node name="Label10" type="Label" parent="."]
+offset_left = 1520.0
+offset_top = 668.0
+offset_right = 1656.0
+offset_bottom = 691.0
+text = "bananas heal you"
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]

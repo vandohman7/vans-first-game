@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=3 uid="uid://cc731kr5upt2t"]
+[gd_scene load_steps=17 format=3 uid="uid://cc731kr5upt2t"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_rxlrq"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_0g2ud"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="3_vdq76"]
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="4_bl6x6"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="5_lkx0t"]
+[ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="5_ok6b5"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="6_6h45p"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="8_oydyu"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="9_sw0vo"]
@@ -1173,9 +1174,12 @@ position = Vector2(2122, 581)
 [node name="berry_collectable15" parent="TileMap/berrys" instance=ExtResource("4_bl6x6")]
 position = Vector2(2433, 574)
 
-[node name="pineapples" type="Node" parent="TileMap"]
+[node name="banana" parent="TileMap/berrys" instance=ExtResource("5_ok6b5")]
+position = Vector2(1014, 537)
 
-[node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("5_lkx0t")]
+[node name="pineapples" type="Node" parent="TileMap/berrys"]
+
+[node name="pineapple" parent="TileMap/berrys/pineapples" instance=ExtResource("5_lkx0t")]
 position = Vector2(1580, 583)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("6_6h45p")]
@@ -1183,23 +1187,6 @@ texture_filter = 1
 position = Vector2(87, 580)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-
-[node name="pause_menu" parent="CharacterBody2D"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
-visible = false
-offset_left = 4.0
-offset_top = -6.0
-offset_right = 4.0
-offset_bottom = -6.0
-script = null
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

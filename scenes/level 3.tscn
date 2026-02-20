@@ -1,9 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://i5a0ryoitmai"]
+[gd_scene load_steps=17 format=3 uid="uid://i5a0ryoitmai"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_25uk8"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_a3576"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="3_iquks"]
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="4_mi1ge"]
+[ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="5_25uk8"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="5_ihmap"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="6_pbsnm"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="8_pnvxl"]
@@ -1161,12 +1162,15 @@ position = Vector2(2883, 542)
 [node name="berry_collectable10" parent="TileMap/berrys" instance=ExtResource("4_mi1ge")]
 position = Vector2(3404, 770)
 
-[node name="pineapples" type="Node" parent="TileMap"]
+[node name="banana" parent="TileMap/berrys" instance=ExtResource("5_25uk8")]
+position = Vector2(2378, 773)
 
-[node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("5_ihmap")]
+[node name="pineapples" type="Node" parent="TileMap/berrys"]
+
+[node name="pineapple" parent="TileMap/berrys/pineapples" instance=ExtResource("5_ihmap")]
 position = Vector2(689, 645)
 
-[node name="pineapple2" parent="TileMap/pineapples" instance=ExtResource("5_ihmap")]
+[node name="pineapple2" parent="TileMap/berrys/pineapples" instance=ExtResource("5_ihmap")]
 position = Vector2(2768, 493)
 
 [node name="end sheep" parent="TileMap" instance=ExtResource("11_j5kiq")]
