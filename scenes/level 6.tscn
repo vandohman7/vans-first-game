@@ -1179,47 +1179,47 @@ position = Vector2(1813, -326)
 
 [node name="Node2" type="Node" parent="."]
 
-[node name="cherrys" type="Node" parent="."]
+[node name="berrys" type="Node" parent="."]
 
-[node name="berry_collectable" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(785, 580)
 
-[node name="berry_collectable2" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable2" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(1094, 534)
 
-[node name="berry_collectable3" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable3" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(1172, 576)
 
-[node name="berry_collectable4" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable4" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(3625, 485)
 
-[node name="berry_collectable5" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable5" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(189, 576)
 
-[node name="berry_collectable6" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable6" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(2522, -341)
 
-[node name="berry_collectable7" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable7" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(2258, -386)
 
-[node name="berry_collectable8" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable8" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(2310, -388)
 
-[node name="berry_collectable9" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable9" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(2738, -387)
 
-[node name="berry_collectable10" parent="cherrys" instance=ExtResource("4_rast2")]
+[node name="berry_collectable10" parent="berrys" instance=ExtResource("4_rast2")]
 position = Vector2(2787, -388)
 
-[node name="banana" parent="cherrys" instance=ExtResource("11_rv4r1")]
+[node name="banana" parent="berrys" instance=ExtResource("11_rv4r1")]
 position = Vector2(726, 587)
 
-[node name="pineapples" type="Node" parent="cherrys"]
+[node name="pineapples" type="Node" parent="berrys"]
 
-[node name="pineapple" parent="cherrys/pineapples" instance=ExtResource("5_iwnyi")]
+[node name="pineapple" parent="berrys/pineapples" instance=ExtResource("5_iwnyi")]
 position = Vector2(3833, -332)
 
-[node name="pineapple2" parent="cherrys/pineapples" instance=ExtResource("5_iwnyi")]
+[node name="pineapple2" parent="berrys/pineapples" instance=ExtResource("5_iwnyi")]
 position = Vector2(2349, 587)
 
 [node name="enemys" type="Node" parent="."]

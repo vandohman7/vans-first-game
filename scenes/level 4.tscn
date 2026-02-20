@@ -259,10 +259,6 @@ script = ExtResource("8_a1ib3")
 [node name="end sheep" parent="." instance=ExtResource("10_pc85o")]
 position = Vector2(2689, 493)
 
-[node name="Node2" type="Node" parent="."]
-
-[node name="Node" type="Node" parent="Node2"]
-
 [node name="charry" type="Node" parent="."]
 
 [node name="berry_collectable" parent="charry" instance=ExtResource("7_5x1dc")]

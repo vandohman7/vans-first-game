@@ -1152,15 +1152,15 @@ position = Vector2(1141, 758)
 
 [node name="Node" parent="TileMap/berrys" instance=ExtResource("5_g2equ")]
 
-[node name="pineapples" type="Node" parent="TileMap"]
+[node name="pineapples" type="Node" parent="TileMap/berrys"]
 
-[node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
+[node name="pineapple" parent="TileMap/berrys/pineapples" instance=ExtResource("6_wr8iv")]
 position = Vector2(1355, 809)
 
-[node name="pineapple2" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
+[node name="pineapple2" parent="TileMap/berrys/pineapples" instance=ExtResource("6_wr8iv")]
 position = Vector2(1539, 774)
 
-[node name="banana" parent="TileMap/pineapples" instance=ExtResource("5_g2equ")]
+[node name="banana" parent="TileMap/berrys" instance=ExtResource("5_g2equ")]
 position = Vector2(1578, 723)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_g2equ")]

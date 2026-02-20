@@ -1,53 +1,53 @@
-[gd_scene load_steps=22 format=3 uid="uid://gd6lelmjptj0"]
+[gd_scene load_steps=22 format=3 uid="uid://cgntlwqba2e6w"]
 
-[ext_resource type="Texture2D" uid="uid://8oresfx3a04x" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="1_7k104"]
-[ext_resource type="Script" uid="uid://dcbqffce7y1wd" path="res://scenes/scripts/enemy.gd" id="1_md0e3"]
-[ext_resource type="PackedScene" uid="uid://bvohutngysalv" path="res://scenes/components/health_component.tscn" id="3_0xr65"]
-[ext_resource type="PackedScene" uid="uid://c7rdgducx0q0n" path="res://scenes/components/hitbox_component.tscn" id="4_mxbal"]
-[ext_resource type="PackedScene" uid="uid://bcr8mdb5pn3t3" path="res://scenes/components/hurtbox_component.tscn" id="5_mxbal"]
+[ext_resource type="Script" uid="uid://dcbqffce7y1wd" path="res://scenes/scripts/enemy.gd" id="1_4lfpl"]
+[ext_resource type="Texture2D" uid="uid://8oresfx3a04x" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="2_kqi0l"]
+[ext_resource type="PackedScene" uid="uid://bvohutngysalv" path="res://scenes/components/health_component.tscn" id="3_nsq7f"]
+[ext_resource type="PackedScene" uid="uid://c7rdgducx0q0n" path="res://scenes/components/hitbox_component.tscn" id="4_0xy0p"]
+[ext_resource type="PackedScene" uid="uid://bcr8mdb5pn3t3" path="res://scenes/components/hurtbox_component.tscn" id="5_k5065"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kek77"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efxa6"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycdy4"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cqfq"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yaehf"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_074og"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cegan"]
-atlas = ExtResource("1_7k104")
+atlas = ExtResource("2_kqi0l")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_82xsv"]
@@ -104,7 +104,7 @@ size = Vector2(26.000004, 31.375)
 size = Vector2(22.000004, 4)
 
 [node name="enemy" type="RigidBody2D"]
-script = ExtResource("1_md0e3")
+script = ExtResource("1_4lfpl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -118,10 +118,10 @@ frame_progress = 0.3707389
 position = Vector2(4, -1)
 shape = SubResource("RectangleShape2D_4gyqm")
 
-[node name="HealthComponent" parent="." instance=ExtResource("3_0xr65")]
+[node name="HealthComponent" parent="." instance=ExtResource("3_nsq7f")]
 max_health = 20.0
 
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_mxbal")]
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_0xy0p")]
 collision_layer = 2
 health_component = NodePath("../HealthComponent")
 
@@ -129,7 +129,7 @@ health_component = NodePath("../HealthComponent")
 position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_mxbal")
 
-[node name="HurtboxComponent" parent="." instance=ExtResource("5_mxbal")]
+[node name="HurtboxComponent" parent="." instance=ExtResource("5_k5065")]
 position = Vector2(-43, -2)
 collision_layer = 2
 hurtbox_damage = 50.0
@@ -138,7 +138,7 @@ hurtbox_damage = 50.0
 position = Vector2(47.000004, 1.6875)
 shape = SubResource("RectangleShape2D_4ra3w")
 
-[node name="HurtboxComponent2" parent="." instance=ExtResource("5_mxbal")]
+[node name="HurtboxComponent2" parent="." instance=ExtResource("5_k5065")]
 position = Vector2(-43, -2)
 collision_layer = 2
 hurtbox_damage = 99999.0

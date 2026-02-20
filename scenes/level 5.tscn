@@ -1263,8 +1263,4 @@ position = Vector2(1233, 586)
 [node name="end sheep" parent="." instance=ExtResource("11_ra0hn")]
 position = Vector2(4218, 586)
 
-[node name="Node2" type="Node" parent="."]
-
-[node name="Node" type="Node" parent="Node2"]
-
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
