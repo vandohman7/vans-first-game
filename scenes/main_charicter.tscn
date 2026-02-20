@@ -442,7 +442,7 @@ animations = [{
 size = Vector2(24, 31.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjggn"]
-size = Vector2(24, 32)
+size = Vector2(26, 34)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(10, 45)
@@ -498,12 +498,11 @@ script = ExtResource("7_msvtj")
 max_health = 100.0
 
 [node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component", "knock_component") instance=ExtResource("8_2cj72")]
-collision_mask = 2
 health_component = NodePath("../HealthComponent")
 knock_component = NodePath("../KnockbackComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
-position = Vector2(3, 0)
+position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_mjggn")
 
 [node name="KnockbackComponent" type="Node2D" parent="."]
