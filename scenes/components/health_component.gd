@@ -5,6 +5,7 @@ class_name HealthComponent
 @export var max_health: float = 10
 
 signal health_is_zero
+signal health_modified(health: float, max_health: float)
 
 var health: float = 10
 
@@ -15,6 +16,9 @@ func _ready() -> void:
 func take_damage(amount: float):
 	health = health - amount
 	health_changed()
+	
+
+
 
 func heal_damage(amount: float):
 	health = health + amount
@@ -23,9 +27,9 @@ func heal_damage(amount: float):
 	
 func health_changed():
 	health = clamp(health,0,max_health)
-	#print(health)
+	health_modified.emit(health, max_health)
 	if health <= 0:
 		print("DEAD")
 		health_is_zero.emit()
-		#get_parent().queue_free()
+		
 	

@@ -5,14 +5,17 @@ var JUMP_VELOCITY = -430.0
 #var howLongKeyPressed = 0
 var acceleration = 20
 var zoominair = true
+var inAir = 0
 
-#@onready var sprite_2d = $Sprite2D
-@onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
+#@onready var attack_hitbox: CollisionShape2D = $HurtboxComponent/attack_hitbox
+#@onready var health_component: HealthComponent = $HealthComponent
 @onready var animation: AnimationPlayer = $visuals/AnimationPlayer
 @onready var visuals: Node2D = $visuals
+@onready var hp_label: Label = $HP_ui/Panel/hp_label
+@onready var max_hp_label: Label = $HP_ui/Panel/max_hp_label
 
 
-var inAir = 0
+
 
 #var entitiesInAttackRange: Array[Node2D] = []
 
@@ -21,18 +24,6 @@ var fastfall = false
 
 var attackAnimationTime = .4
 var isAttacking: float = 0
-
-
-		
-
-
-
-#func _process(delta: float) -> void:
-	
-	####### ATTACKING ######3
-
-
-
 
 func _physics_process(delta: float) -> void:
 
@@ -43,11 +34,9 @@ func _physics_process(delta: float) -> void:
 	else:
 		acceleration = 20
 
-
 	if is_on_floor():
 		fastfall = false
 		zoominair = true
-
 
 	var direction := Input.get_axis("left", "right")
 	if direction:
@@ -57,8 +46,6 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, acceleration)
 
 	move_and_slide()
-	
-
 
 	if Input.is_action_just_pressed("left"):
 		facing_dir = "left"
@@ -92,18 +79,6 @@ func _physics_process(delta: float) -> void:
 			animation.play("run")
 		else: 
 			animation.play("idle")
-	
-
-	#if Input.is_action_pressed("sprint"):
-		#SPEED = 550
-		#acceleration = 40
-	#else:
-		#SPEED = 400
-		#acceleration = 20
-
-
-
-
 
 # Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -112,14 +87,12 @@ func _physics_process(delta: float) -> void:
 		velocity.y = +800
 		fastfall = true
 		
-
 	if Input.is_action_just_pressed("zoom") and zoominair == true:
 		velocity.y = -150
 		zoominair = false
 		if facing_dir == ("right"):
 			velocity.x = 800
 		else: velocity.x = -800
-		
 
 	if Input.is_action_just_pressed("turn_right"):
 		facing_dir = "right"
@@ -138,15 +111,12 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("main_menu"):
 		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
-
 	if Input.is_action_just_pressed("reset"):
 		get_tree().reload_current_scene()
-
-
-	if Input.is_action_just_pressed("quit"):
-		get_tree().quit()
-
 
 func _on_health_component_health_is_zero() -> void:
 	print("died")
 	get_tree().reload_current_scene()
+
+func _on_health_component_health_modified(health: float, max_health: float) -> void:
+	hp_label.text = str(int(health))

@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://bk7erndjgnx4x"]
+[gd_scene load_steps=45 format=3 uid="uid://bk7erndjgnx4x"]
 
-[ext_resource type="Script" uid="uid://cqbewn8p8h336" path="res://scenes/main_charicter.gd" id="1_er63p"]
+[ext_resource type="Script" uid="uid://cqbewn8p8h336" path="res://scenes/scripts/main_charicter.gd" id="1_er63p"]
+[ext_resource type="Script" uid="uid://cwnfxjrqm78np" path="res://scenes/components/knockback_component.gd" id="1_mjggn"]
 [ext_resource type="Texture2D" uid="uid://c2w6anfsq76gg" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Idle.png" id="1_pdq4l"]
 [ext_resource type="Texture2D" uid="uid://ctwfq04ipc542" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Attack1.png" id="2_0q8bm"]
 [ext_resource type="Texture2D" uid="uid://bdvui86msfxq5" path="res://Heart/Tiny Swords (Free Pack)/Units/Yellow Units/Warrior/Warrior_Run.png" id="3_s5u5a"]
@@ -492,16 +493,85 @@ shape = SubResource("RectangleShape2D_er63p")
 position = Vector2(1, 0)
 
 [node name="HealthComponent" type="Node2D" parent="."]
+unique_name_in_owner = true
 script = ExtResource("7_msvtj")
 max_health = 100.0
 
-[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("8_2cj72")]
-visible = false
+[node name="HitboxComponent" parent="." node_paths=PackedStringArray("health_component", "knock_component") instance=ExtResource("8_2cj72")]
 collision_mask = 2
 health_component = NodePath("../HealthComponent")
+knock_component = NodePath("../KnockbackComponent")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_mjggn")
 
+[node name="KnockbackComponent" type="Node2D" parent="."]
+script = ExtResource("1_mjggn")
+metadata/_custom_type_script = "uid://cwnfxjrqm78np"
+
+[node name="HP_ui" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="HP_ui"]
+offset_left = 3.0
+offset_top = 573.0
+offset_right = 234.0
+offset_bottom = 644.0
+
+[node name="hp_label" type="Label" parent="HP_ui/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -90.0
+offset_top = -24.5
+offset_right = -89.0
+offset_bottom = 29.5
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(18.32785, 0.0058156196, 0.00078855857, 1)
+theme_override_font_sizes/font_size = 39
+text = "100"
+
+[node name="HP" type="Label" parent="HP_ui/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 62.0
+offset_bottom = 67.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
+text = "HP:"
+
+[node name="max_hp_label" type="Label" parent="HP_ui/Panel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 160.0
+offset_top = -25.5
+offset_right = 228.0
+offset_bottom = 29.5
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "100"
+
+[node name="backslash" type="Label" parent="HP_ui/Panel"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 144.0
+offset_top = 9.0
+offset_right = 160.0
+offset_bottom = 64.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "/"
+
 [connection signal="health_is_zero" from="HealthComponent" to="." method="_on_health_component_health_is_zero"]
+[connection signal="health_modified" from="HealthComponent" to="." method="_on_health_component_health_modified"]
