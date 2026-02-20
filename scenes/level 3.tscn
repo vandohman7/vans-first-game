@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://i5a0ryoitmai"]
+[gd_scene load_steps=18 format=3 uid="uid://i5a0ryoitmai"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_25uk8"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_a3576"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="9_xn48u"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="10_udw07"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="11_j5kiq"]
+[ext_resource type="PackedScene" uid="uid://cgntlwqba2e6w" path="res://scenes/collectablse/Bob_da_frog.tscn" id="12_a3576"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_a3576")
@@ -1248,5 +1249,11 @@ position = Vector2(3380, 777)
 
 [node name="enemy12" parent="enemys" instance=ExtResource("10_udw07")]
 position = Vector2(3437, 777)
+
+[node name="enemy7" parent="enemys" instance=ExtResource("12_a3576")]
+position = Vector2(617, 571)
+
+[node name="enemy13" parent="enemys" instance=ExtResource("12_a3576")]
+position = Vector2(2394, 733)
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
