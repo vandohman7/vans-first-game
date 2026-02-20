@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c832h4hh3c136"]
+[gd_scene load_steps=18 format=3 uid="uid://c832h4hh3c136"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_1bvp3"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="4_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dg5mo2vf7bwsd" path="res://scenes/collectablse/berry_collectable.tscn" id="5_lquwl"]
 [ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="6_bsmkr"]
+[ext_resource type="PackedScene" uid="uid://cgntlwqba2e6w" path="res://scenes/collectablse/Bob_da_frog.tscn" id="7_3pdoh"]
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://cpp2tcrmxsm5r" path="res://scenes/scripts/death_floor.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="8_5vw27"]
@@ -1169,8 +1170,11 @@ position = Vector2(3203, 330)
 
 [node name="banana" type="Node" parent="TileMap/berrys"]
 
-[node name="banana2" parent="TileMap/berrys" instance=ExtResource("6_bsmkr")]
+[node name="banana" parent="TileMap/berrys/banana" instance=ExtResource("6_bsmkr")]
 position = Vector2(2549, 491)
+
+[node name="enemy" parent="TileMap/berrys" instance=ExtResource("7_3pdoh")]
+position = Vector2(136, 60)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_lquwl")]
 texture_filter = 1

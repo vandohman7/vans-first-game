@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bnv84tsldwmv6"]
+[gd_scene load_steps=18 format=3 uid="uid://bnv84tsldwmv6"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_0epgs"]
 [ext_resource type="PackedScene" uid="uid://bk7erndjgnx4x" path="res://scenes/main_charicter.tscn" id="2_g2equ"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="8_vrdqu"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="10_ikfo1"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="11_g2equ"]
+[ext_resource type="PackedScene" uid="uid://cgntlwqba2e6w" path="res://scenes/collectablse/Bob_da_frog.tscn" id="12_tbcdj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("3_tbcdj")
@@ -1152,15 +1153,15 @@ position = Vector2(1141, 758)
 
 [node name="Node" parent="TileMap/berrys" instance=ExtResource("5_g2equ")]
 
-[node name="pineapples" type="Node" parent="TileMap"]
+[node name="pineapples" type="Node" parent="TileMap/berrys"]
 
-[node name="pineapple" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
+[node name="pineapple" parent="TileMap/berrys/pineapples" instance=ExtResource("6_wr8iv")]
 position = Vector2(1355, 809)
 
-[node name="pineapple2" parent="TileMap/pineapples" instance=ExtResource("6_wr8iv")]
+[node name="pineapple2" parent="TileMap/berrys/pineapples" instance=ExtResource("6_wr8iv")]
 position = Vector2(1539, 774)
 
-[node name="banana" parent="TileMap/pineapples" instance=ExtResource("5_g2equ")]
+[node name="banana" parent="TileMap/berrys" instance=ExtResource("5_g2equ")]
 position = Vector2(1578, 723)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_g2equ")]
@@ -1303,5 +1304,8 @@ offset_top = 668.0
 offset_right = 1656.0
 offset_bottom = 691.0
 text = "bananas heal you"
+
+[node name="enemy" parent="." instance=ExtResource("12_tbcdj")]
+position = Vector2(1765, 796)
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]

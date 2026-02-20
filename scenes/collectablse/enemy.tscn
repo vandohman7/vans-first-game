@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://gd6lelmjptj0"]
+[gd_scene load_steps=22 format=3 uid="uid://gd6lelmjptj0"]
 
 [ext_resource type="Texture2D" uid="uid://8oresfx3a04x" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Main Characters/Mask Dude/Idle (32x32).png" id="1_7k104"]
 [ext_resource type="Script" uid="uid://dcbqffce7y1wd" path="res://scenes/scripts/enemy.gd" id="1_md0e3"]
@@ -95,10 +95,13 @@ animations = [{
 size = Vector2(25.46875, 29)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mxbal"]
-size = Vector2(24, 29.5)
+size = Vector2(26, 29.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ra3w"]
-size = Vector2(27.000004, 30.75)
+size = Vector2(26.000004, 31.375)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3q3ao"]
+size = Vector2(22.000004, 4)
 
 [node name="enemy" type="RigidBody2D"]
 script = ExtResource("1_md0e3")
@@ -123,7 +126,7 @@ collision_layer = 2
 health_component = NodePath("../HealthComponent")
 
 [node name="hurtbox" type="CollisionShape2D" parent="HitboxComponent"]
-position = Vector2(5, -1.25)
+position = Vector2(4, 0)
 shape = SubResource("RectangleShape2D_mxbal")
 
 [node name="HurtboxComponent" parent="." instance=ExtResource("5_mxbal")]
@@ -132,8 +135,17 @@ collision_layer = 2
 hurtbox_damage = 50.0
 
 [node name="hitbox" type="CollisionShape2D" parent="HurtboxComponent"]
-position = Vector2(47.500004, 0.625)
+position = Vector2(47.000004, 1.6875)
 shape = SubResource("RectangleShape2D_4ra3w")
+
+[node name="HurtboxComponent2" parent="." instance=ExtResource("5_mxbal")]
+position = Vector2(-43, -2)
+collision_layer = 2
+hurtbox_damage = 99999.0
+
+[node name="hitbox" type="CollisionShape2D" parent="HurtboxComponent2"]
+position = Vector2(47.000004, 15)
+shape = SubResource("RectangleShape2D_3q3ao")
 
 [connection signal="health_is_zero" from="HealthComponent" to="." method="_on_health_component_health_is_zero"]
 [connection signal="body_entered" from="HitboxComponent" to="." method="_on_hitbox_component_body_entered"]

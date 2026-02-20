@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d20a125xinghm"]
+[gd_scene load_steps=15 format=3 uid="uid://d20a125xinghm"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_5co2d"]
 [ext_resource type="Texture2D" uid="uid://dspfy4qtkpg8r" path="res://Heart/Tiny Swords (Free Pack)/Pixel Adventure 1/Free/Terrain (16x16).png" id="3_qamva"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="8_yefci"]
 [ext_resource type="PackedScene" uid="uid://cciqh88vvoj8t" path="res://scenes/collectablse/pineapple.tscn" id="9_5co2d"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="10_pc85o"]
+[ext_resource type="PackedScene" uid="uid://cgntlwqba2e6w" path="res://scenes/collectablse/Bob_da_frog.tscn" id="11_rxlrq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kg3in"]
 texture = ExtResource("3_qamva")
@@ -259,10 +260,6 @@ script = ExtResource("8_a1ib3")
 [node name="end sheep" parent="." instance=ExtResource("10_pc85o")]
 position = Vector2(2689, 493)
 
-[node name="Node2" type="Node" parent="."]
-
-[node name="Node" type="Node" parent="Node2"]
-
 [node name="charry" type="Node" parent="."]
 
 [node name="berry_collectable" parent="charry" instance=ExtResource("7_5x1dc")]
@@ -367,5 +364,8 @@ position = Vector2(2230, 553)
 
 [node name="enemy16" parent="enemy" instance=ExtResource("8_vx57a")]
 position = Vector2(2353, 524)
+
+[node name="enemy2" parent="." instance=ExtResource("11_rxlrq")]
+position = Vector2(1682, 547)
 
 [connection signal="body_entered" from="death_floor" to="death_floor" method="_on_body_entered"]
