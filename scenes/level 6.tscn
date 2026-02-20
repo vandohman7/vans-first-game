@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cun4s5guur15p"]
+[gd_scene load_steps=17 format=3 uid="uid://cun4s5guur15p"]
 
 [ext_resource type="Texture2D" uid="uid://bosqucpu122yu" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Water Background color.png" id="1_3fcy3"]
 [ext_resource type="Texture2D" uid="uid://cgrqgal1v2cyd" path="res://Heart/Tiny Swords (Free Pack)/Terrain/Tilemap_color1.png" id="2_rv4r1"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://bjb7g21kmdkjh" path="res://game_manager.gd" id="8_o7jp0"]
 [ext_resource type="PackedScene" uid="uid://gd6lelmjptj0" path="res://scenes/collectablse/enemy.tscn" id="9_1cyqr"]
 [ext_resource type="PackedScene" uid="uid://bs74plac4mp21" path="res://scenes/end_sheep.tscn" id="10_q46us"]
+[ext_resource type="PackedScene" uid="uid://80inp6svuu1s" path="res://scenes/collectablse/banana.tscn" id="11_rv4r1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h2yge"]
 texture = ExtResource("2_rv4r1")
@@ -1178,14 +1179,6 @@ position = Vector2(1813, -326)
 
 [node name="Node2" type="Node" parent="."]
 
-[node name="pineapples" type="Node" parent="."]
-
-[node name="pineapple" parent="pineapples" instance=ExtResource("5_iwnyi")]
-position = Vector2(3833, -332)
-
-[node name="pineapple2" parent="pineapples" instance=ExtResource("5_iwnyi")]
-position = Vector2(2349, 587)
-
 [node name="cherrys" type="Node" parent="."]
 
 [node name="berry_collectable" parent="cherrys" instance=ExtResource("4_rast2")]
@@ -1217,6 +1210,17 @@ position = Vector2(2738, -387)
 
 [node name="berry_collectable10" parent="cherrys" instance=ExtResource("4_rast2")]
 position = Vector2(2787, -388)
+
+[node name="banana" parent="cherrys" instance=ExtResource("11_rv4r1")]
+position = Vector2(726, 587)
+
+[node name="pineapples" type="Node" parent="cherrys"]
+
+[node name="pineapple" parent="cherrys/pineapples" instance=ExtResource("5_iwnyi")]
+position = Vector2(3833, -332)
+
+[node name="pineapple2" parent="cherrys/pineapples" instance=ExtResource("5_iwnyi")]
+position = Vector2(2349, 587)
 
 [node name="enemys" type="Node" parent="."]
 
