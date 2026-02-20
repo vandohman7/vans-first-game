@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dncuxbclvlsl7" path="res://scenes/scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Texture2D" uid="uid://b31it1vdcd4p3" path="res://scenes/images/Gemini_Generated_Image_i60m07i60m07i60m (1).png" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://b5klp1ca0jdye" path="res://scenes/images/game_main_menu.png" id="2_bqqt6"]
-[ext_resource type="Script" uid="uid://t8fr1rupqn75" path="res://scenes/tutorial.gd" id="4_8ln24"]
+[ext_resource type="Script" uid="uid://t8fr1rupqn75" path="res://scenes/scripts/tutorial.gd" id="4_8ln24"]
 [ext_resource type="PackedScene" uid="uid://5x0uondmcxpa" path="res://scenes/music.tscn" id="4_wu84c"]
 
 [sub_resource type="GDScript" id="GDScript_8ln24"]
